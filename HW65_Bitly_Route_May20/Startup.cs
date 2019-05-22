@@ -14,6 +14,8 @@ namespace HW65_Bitly_Route_May20
 {
     public class Startup
     {
+        public const string CookieScheme = "YourSchemeName";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -24,12 +26,13 @@ namespace HW65_Bitly_Route_May20
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            services.AddSession();
+            services.AddAuthentication(CookieScheme)
+               .AddCookie(CookieScheme, options =>
+               {
+                   options.AccessDeniedPath = "/account/denied";
+                   options.LoginPath = "/account/login";
+               });
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -47,7 +50,10 @@ namespace HW65_Bitly_Route_May20
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+            
 
+            app.UseSession();
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

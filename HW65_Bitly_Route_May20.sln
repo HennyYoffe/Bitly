@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW65_Bitly_Route_May20", "HW65_Bitly_Route_May20\HW65_Bitly_Route_May20.csproj", "{903456E5-1499-44CB-8502-68EED29CDDE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{87788D47-C4C1-4074-9C30-95A2332D0F14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{903456E5-1499-44CB-8502-68EED29CDDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{903456E5-1499-44CB-8502-68EED29CDDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{903456E5-1499-44CB-8502-68EED29CDDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87788D47-C4C1-4074-9C30-95A2332D0F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87788D47-C4C1-4074-9C30-95A2332D0F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87788D47-C4C1-4074-9C30-95A2332D0F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87788D47-C4C1-4074-9C30-95A2332D0F14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
